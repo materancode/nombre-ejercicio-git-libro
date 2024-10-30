@@ -114,7 +114,60 @@ Date:   Mon Oct 14 15:58:35 2024 +0100
 
 
 
+Bárbara@DESKTOP-6E88R1N MINGW64 ~/Documents/Projects/nombre-ejercicio-git-libro/capitulos (main)
+$ ls
+capitulo1.txt  capitulo2.txt  capitulo3.txt
+
+Bárbara@DESKTOP-6E88R1N MINGW64 ~/Documents/Projects/nombre-ejercicio-git-libro/capitulos (main)
+$ cat > índice.txt
+Indice de los cápitulos, con conceptos avanzados de git
+
+Bárbara@DESKTOP-6E88R1N MINGW64 ~/Documents/Projects/nombre-ejercicio-git-libro/capitulos (main)
+$ ls
+capitulo1.txt  capitulo2.txt  capitulo3.txt  índice.txt
+
+Bárbara@DESKTOP-6E88R1N MINGW64 ~/Documents/Projects/nombre-ejercicio-git-libro/capitulos (main)
+$  git add .
+ git commit -m "Se crea el indice."
+ echo "Indice de los cápitulos, con conceptos avanzados de git" >> indice.txt
+ git add .
+ git commit -m "Añadido el índice ."
+ git annotate indice.txt
+warning: in the working copy of 'capitulos/índice.txt', LF will be replaced by CRLF the next time Git touches it
+[main 0286cb8] Se crea el indice.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 "capitulos/\303\255ndice.txt"
+warning: in the working copy of 'capitulos/indice.txt', LF will be replaced by CRLF the next time Git touches it
+[main 63982e2] Añadido el índice .
+ 1 file changed, 1 insertion(+)
+ create mode 100644 capitulos/indice.txt
+63982e2a        (materancode    2024-10-29 23:07:52 +0000       1)Indice de los cápitulos, con conceptos avanzados de git
+
+Bárbara@DESKTOP-6E88R1N MINGW64 ~/Documents/Projects/nombre-ejercicio-git-libro/capitulos (main)
 
 ```
+
+## Cambios en la bibliografía
+
+´´´ code
+Bárbara@DESKTOP-6E88R1N MINGW64 ~/Documents/Projects/nombre-ejercicio-git-libro/capitulos (main)
+$ cat > capitulo4.txt
+  En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto.
+
+Bárbara@DESKTOP-6E88R1N MINGW64 ~/Documents/Projects/nombre-ejercicio-git-libro/capitulos (main)
+$ git add .
+git commit -m "Añadido capítulo 4."
+git log --graph --all --oneline
+warning: in the working copy of 'capitulos/capitulo4.txt', LF will be replaced by CRLF the next time Git touches it
+[main c67fb9c] Añadido capítulo 4.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 capitulos/capitulo4.txt
+* c67fb9c (HEAD -> main) Añadido capítulo 4.
+* 63982e2 (bibliografia) Añadido el índice .
+* 0286cb8 Se crea el indice.
+* 4a4db26 Añadido capítulo 3.
+
+
+´´´
 
 
